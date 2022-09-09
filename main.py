@@ -9,7 +9,7 @@ api_id = 12314389
 api_hash = '43e5debccb4b25e41a49a0dc8fa14bbe'
 quest = ['🌲Forest', '🍄Swamp', '🏔Mountain']
 quest2 = ['🌲', '🍄', '🏔']
-client = TelegramClient(StringSession(string), api_id, api_hash, timeout=5, retry_delay=5, sequential_updates=True, auto_reconnect=True)
+client = TelegramClient(StringSession(session), api_id, api_hash, timeout=5, retry_delay=5, sequential_updates=True, auto_reconnect=True)
 
 
 @client.on(events.NewMessage(chats=(408101137, 975143758, -618582074), incoming=True))
