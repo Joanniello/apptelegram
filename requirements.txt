@@ -1,2 +1,2 @@
 telethon>=1.25.0
-logging>=3.10
+logging>=0.4.9.6
