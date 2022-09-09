@@ -2,6 +2,7 @@ from telethon import TelegramClient, events
 import logging
 from random import randint, choice
 import asyncio
+import config
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s', level=logging.WARNING)
 api_id = 12314389
 api_hash = '43e5debccb4b25e41a49a0dc8fa14bbe'
