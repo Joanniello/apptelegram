@@ -8,7 +8,7 @@ api_id = 12314389
 api_hash = '43e5debccb4b25e41a49a0dc8fa14bbe'
 quest = ['🌲Forest', '🍄Swamp', '🏔Mountain']
 quest2 = ['🌲', '🍄', '🏔']
-client = TelegramClient('lauri', api_id, api_hash, sequential_updates=True)
+client = TelegramClient(config.SESSION, config.API_ID, config.API_HASH, timeout=5, retry_delay=5, sequential_updates=True, auto_reconnect=True)
 
 
 @client.on(events.NewMessage(chats=(408101137, 975143758, -618582074), incoming=True))
@@ -108,5 +108,5 @@ async def mobs(event):
                 await client.send_message(408101137, mob)
 
 
-client.start()
+client.start(config.MY_PHONE)
 client.run_until_disconnected()
