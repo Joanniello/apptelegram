@@ -1,14 +1,15 @@
 from telethon import TelegramClient, events
+from telethon.sessions import StringSession
 import logging
 from random import randint, choice
 import asyncio
-import config
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s', level=logging.WARNING)
+session = '1AZWarzQBu61UPwcV4f3QBZIAMPN40WgeFfnQN7QpumXqcBun9291QN9OZoDFVY0LMFvDLHgH-4sSvFfKmIie_SVSRy6ckCbUQcGg-tHuqTje44UX7YwkZ2rR8Y2vMo3AH-5S4D_M6sxB7CCkVI95hQnay1MqZtdFeMXPQy0B7wPkXt2j6l1aeVIHMzLVezjscjbrzU9haTOO8u24dI4UUhz0BPoXhgNjPa1qbxTRhYfDRM2UAES62rlu83kH2fsWiWzInUbHZ-7fFhoPzQrelVyxWMH-t1JPHKtUdhY48I3RVSNtcGz8J6ijDxr0owSOYbPusKmE9oBLXim35azHjbINc_875fM='
 api_id = 12314389
 api_hash = '43e5debccb4b25e41a49a0dc8fa14bbe'
 quest = ['🌲Forest', '🍄Swamp', '🏔Mountain']
 quest2 = ['🌲', '🍄', '🏔']
-client = TelegramClient(config.SESSION, config.API_ID, config.API_HASH, timeout=5, retry_delay=5, sequential_updates=True, auto_reconnect=True)
+client = TelegramClient(StringSession(string), api_id, api_hash, timeout=5, retry_delay=5, sequential_updates=True, auto_reconnect=True)
 
 
 @client.on(events.NewMessage(chats=(408101137, 975143758, -618582074), incoming=True))
