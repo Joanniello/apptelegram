@@ -109,5 +109,5 @@ async def mobs(event):
                 await client.send_message(408101137, mob)
 
 
-client.start(config.MY_PHONE)
+client.start()
 client.run_until_disconnected()
