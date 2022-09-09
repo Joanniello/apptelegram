@@ -1,4 +1,4 @@
 telethon>=1.25.0
-random>=1.0
-logging>=1.0
-asyncio>=1.0
+random>=none
+logging>=none
+asyncio>=none
