@@ -1,3 +1,2 @@
 telethon>=1.25.0
 random.py
-logging>=3.10
